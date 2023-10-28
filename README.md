@@ -1,0 +1,1 @@
+# AibekMinbaev.github.io
