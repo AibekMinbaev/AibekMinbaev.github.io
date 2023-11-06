@@ -1049,3 +1049,16 @@ section {
 }
 
 
+.send_email{
+  border: 1px solid;  
+  border-color:#173b6c; 
+  border-radius: 8px; 
+  margin-top: 50px;
+  padding: 10px 10px 10px 10px; 
+  cursor: pointer; 
+  display: inline-block;  
+}
+
+.send_email ul a{
+  text-align: center;
+}
