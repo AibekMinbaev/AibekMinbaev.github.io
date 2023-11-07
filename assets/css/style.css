@@ -1053,7 +1053,7 @@ section {
   border: 1px solid;  
   border-color:#173b6c; 
   border-radius: 8px; 
-  margin-top: 50px;
+  margin: 50px 0 50px 70px;
   padding: 10px 10px 10px 10px; 
   cursor: pointer; 
   display: inline-block;  
