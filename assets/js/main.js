@@ -223,4 +223,31 @@
    */
   new PureCounter();
 
+  window.addEventListener('load', () => {
+    let educationContainer = select('.education-container');
+    if (educationContainer) {
+      let portfolioIsotope = new Isotope(educationContainer, {
+        itemSelector: '.education-item'
+      });
+
+      let educationFilters = select('#education-flters li', true);
+
+      on('click', '#education-flters li', function(e) {
+        e.preventDefault();
+        educationFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        educationIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        educationIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
 })()
