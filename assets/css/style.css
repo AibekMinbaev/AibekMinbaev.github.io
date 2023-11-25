@@ -273,6 +273,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .content{
+  display: flex; 
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -511,6 +515,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 1px 1px 2px 2px lightgray; 
 }
 
 .portfolio .portfolio-wrap::before {
@@ -959,4 +964,12 @@ section {
 
 #education-flters li:last-child {
   margin-right: 0;
+}
+
+#img-wrapper{
+  margin: 20px 20px; 
+  /* box-shadow: 1px 1px 2px 2px #149ddd;  */
+  /* border: solid 2px;  */
+  /* border-color: #149ddd; */
+  /* border-radius: 5%;  */
 }
