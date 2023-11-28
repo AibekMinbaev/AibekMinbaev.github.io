@@ -232,8 +232,8 @@
       });
 
       let educationFilters = select('#education-flters li', true);
-
-      on('click', '#education-flters li', function(e) {
+    
+      function filter(e){
         e.preventDefault();
 
         educationFilters.forEach(function(el) {
@@ -244,10 +244,15 @@
         educationIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
+
         educationIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
-      }, true);
+      }
+
+      on('click', '#education-flters li', filter, true);
+
+      document.getElementById("university-flter").click(); // Workaround solution to filter onload 
     }
 
   });
